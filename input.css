@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url('../img/bg-tablet-pattern.svg');
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-position: 90% -25%;
+
+}
+
+
+#cta  {
+    background-image: url('../img/bg-simplify-section-desktop.svg');
+    background-repeat: no-repeat;
+
+}
+
+
+
+
+#hero {
+    height:  75vh;
+    margin-top: 150px;
+}
+
+
+
+#testimonial {
+    margin-bottom: 350px;
+    margin-top: 350px;
+    
+}
+
+#features {
+    margin-bottom: 150px;
+}
+
+
+@media(max-width:576px) {
+    body {
+        background-position: 50px -50px;
+        background-size: 500px;
+    }
+
+    #cta {
+        background-image: url('../img/bg-simplify-section-mobile.svg');
+
+    }
+
+    #testimonial {
+        margin-bottom: 35px;
+        margin-top: 35px;
+        
+    }
+}
+
+
+/* hamburger menu */
+
+.hamburger {
+     cursor: pointer;
+     width: 24px;
+     height: 24px;
+     transition: all 0.5s;
+     position: relative;
+}
+
+
+.hamburger-top, .hamburger-middle, .hamburger-bottom {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 24px;
+        height: 2px;
+        background: #000;
+        transform: rotate(0);
+        transition: all 0.5s;
+}
+.hamburger-middle {
+    transform: translateY(7px);
+
+}
+.hamburger-bottom {
+    transform: translateY(14px);
+
+}
+
+
+.open {
+    transform: rotate(90deg);
+    transform: translateY(0px);
+
+}
+
+.open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translate(6px);
+    
+}
+
+
+.open .hamburger-middle {
+
+    display: none;
+
+}
+
+.open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+
+
+
+
+.features-box {
+    margin-top: 100px;
+}
